@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+}
+html {
+    font-size: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: relative;
+    background: url("../img/bg-striped.png") repeat;
+}
+.container {
+    margin-top: 1.357em;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    background: #fff;
+    -webkit-box-shadow: 0 0 60px 0 rgba(0,0,0,.6);
+    box-shadow: 0 0 60px 0 rgba(0,0,0,.6);
+}
+.container::after {
+    clear: both;
+    display: table;
+}
+
+
+
+
+
+
+
+
+
+/**************** RESPONSIVE ****************/
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .container-main {
+        margin-bottom: 90px;
+    }
+}
+
+@media (min-width: 1200px) {
+body:before {
+    content: "desktop";
+}
+}
+@media (min-width: 992px) {
+body:before {
+    content: "desktop";
+}
+}
+@media (min-width: 768px) {
+body:before {
+    content: "tablet";
+}
+}
+body:before {
+    content: "smartphone";
+    display: none;
+}
