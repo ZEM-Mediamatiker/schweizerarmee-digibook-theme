@@ -11,20 +11,7 @@
     <body>
         <div class="container container-main">
             <header class="background-size: cover;" role="banner">
-                <section class="nav-services">
-                    <nav class="nav-lang">
-                        <ul>
-                            <li><a href="#" lang="de" title="Deutsch" aria-label="Deutsch">DE</a></li>
-                            <li><a href="#" lang="fr" title="Français sélectionné" aria-label="Français sélectionné" class="active">FR</a></li>
-                            <li><a href="#" lang="it" title="Italiano" aria-label="Italiano">IT</a></li>
-                            <li><a href="#" lang="en" title="English disabled" aria-label="English disabled" class="disabled">EN</a></li>
-                        </ul>
-                    </nav>
-                    <nav class="nav-service">
-                        <ul>
-                            <li><a href="#">Kontakt</a></li>
-                        </ul>
-                    </nav>
+                <section class="nav-services flex">
                     <nav class="navbar treecrumb">
                         <ul class="nav navbar-nav">
                             <!-- Treecrumb dropdown element -->
@@ -36,11 +23,27 @@
 
                         </ul>
                     </nav>
+                    <div class="services-lang-contact flex">
+                        <nav class="nav-service">
+                            <ul>
+                                <li><a href="#">Kontakt</a></li>
+                            </ul>
+                        </nav>
+                        <nav class="nav-lang">
+                            <ul class="flex">
+                                <li><a href="#" lang="de" title="Deutsch" aria-label="Deutsch" class="active">DE</a></li>
+                                <li><a href="#" lang="fr" title="Français sélectionné" aria-label="Français sélectionné">FR</a></li>
+                                <li><a href="#" lang="it" title="Italiano" aria-label="Italiano">IT</a></li>
+                                <li><a href="#" lang="en" title="English disabled" aria-label="English">EN</a></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </section>
                 <a href="#" class="brand hidden-xs" title="Back to home">
-                <img src="img/logo-CH.svg" onerror="this.onerror=null; this.src='img/logo-CH.png'" alt="Back to home" />
-                <h1>Schweizer Armee</h1>
+                    <img src="img/logo-CH.svg" onerror="this.onerror=null; this.src='img/logo-CH.png'" alt="Back to home" />
+                    <h2>Schweizer Armee <br/>Digitales Buch</h2>
                 </a>
+                <div class="clearfix"></div>
                 <div class="mod mod-searchfield global-search global-search-standard">
                     <form class="form-horizontal form-search pull-right">
                         <label for="search-field" class="sr-only">Search:</label>
@@ -228,6 +231,18 @@
                     </li>
                 </ul>
             </nav>
+
+            <!-- CONTENT -->
+            <main>
+
+
+
+            </main>
+
+            <footer>
+
+
+            </footer>
         </div>
         <script src="js/script.js"></script>
     </body>

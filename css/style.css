@@ -1,16 +1,123 @@
+/**************** FONTS ****************/
+@charset "UTF-8";
+    /**************** Admin Icons ****************/
+    @font-face{
+        font-family:'Admin Icons';
+        src:url(../fonts/AdminCH_Symbols.eot?v3);
+        src:url(../fonts/AdminCH_Symbols.eot?#iefix) format("embedded-opentype"),
+        url(../fonts/AdminCH_Symbols.woff2?v3) format("woff2"),
+        url(../fonts/AdminCH_Symbols.woff?v3) format("woff"),
+        url(../fonts/AdminCH_Symbols.ttf?v3) format("truetype");
+        font-weight:400;
+        font-style:normal
+    }
+    /**************** Frutiger Neue ****************/
+    @font-face {
+        font-family: "Frutiger Neue";
+        src: url("../fonts/FrutigerNeueW02-Light.woff") format("woff");
+        font-style: normal;
+        font-weight: 300;
+    }
+    @font-face {
+        font-family: "Frutiger Neue";
+        src: url("../fonts/FrutigerNeueW02-Regular.woff") format("woff");
+        font-style: normal;
+        font-weight: 400;
+    }
+    @font-face {
+        font-family: "Frutiger Neue";
+        src: url("../fonts/FrutigerNeueW02-It.woff") format("woff");
+        font-style: italic;
+        font-weight: 400;
+    }
+    @font-face {
+        font-family: "Frutiger Neue";
+        src: url("../fonts/FrutigerNeueW02-Bd.woff") format("woff");
+        font-style: normal;
+        font-weight: 700;
+    }
+
+    /**************** Open Sans ****************/
+    @font-face {
+        font-family: "Open Sans";
+        src: url("../fonts/OpenSans-Light.woff") format("woff");
+        font-style: normal;
+        font-weight: 300;
+    }
+    @font-face {
+        font-family: "Open Sans";
+        src: url("../fonts/OpenSans-LightItalic.woff") format("woff");
+        font-style: italic;
+        font-weight: 300;
+    }
+    @font-face {
+        font-family: "Open Sans";
+        src: url("../fonts/OpenSans-Regular.woff") format("woff");
+        font-style: normal;
+        font-weight: 400;
+    }
+    @font-face {
+        font-family: "Open Sans";
+        src: url("../fonts/OpenSans-Italic.woff") format("woff");
+        font-style: italic;
+        font-weight: 400;
+    }
+    @font-face {
+        font-family: "Open Sans";
+        src: url("../fonts/OpenSans-SemiBold.woff") format("woff");
+        font-style: normal;
+        font-weight: 600;
+    }
+    @font-face {
+        font-family: "Open Sans";
+        src: url("../fonts/OpenSans-SemiBoldItalic.woff") format("woff");
+        font-style: italic;
+        font-weight: 600;
+    }
+    @font-face {
+        font-family: "Open Sans";
+        src: url("../fonts/OpenSans-Bold.woff") format("woff");
+        font-style: normal;
+        font-weight: 700;
+    }
+    @font-face {
+        font-family: "Open Sans";
+        src: url("../fonts/OpenSans-BoldItalic.woff") format("woff");
+        font-style: italic;
+        font-weight: 700;
+    }
+    @font-face {
+        font-family: "Open Sans";
+        src: url("../fonts/OpenSans-ExtraBold.woff") format("woff");
+        font-style: normal;
+        font-weight: 800;
+    }
+    @font-face {
+        font-family: "Open Sans";
+        src: url("../fonts/OpenSans-ExtraBoldItalic.woff") format("woff");
+        font-style: italic;
+        font-weight: 800;
+    }
+
+/**************** BASIC ****************/
 * {
     box-sizing: border-box;
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-weight: 400;
 }
 html {
-    font-size: 100%;
+    font-size: 87.5%;
 }
 body {
     margin: 0;
     padding: 0;
     width: 100%;
     position: relative;
+    line-height: 1.6;
     background: url("../img/bg-striped.png") repeat;
+}
+.flex {
+    display: flex;
 }
 .container {
     margin-top: 1.357em;
@@ -27,6 +134,137 @@ body {
     clear: both;
     display: table;
 }
+a {
+    text-decoration: none;
+}
+li {
+    font-size: 13px;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.clearfix {
+    clear: both;
+}
+/**************** HEADER ****************/
+
+
+    /**************** SERVICE-NAVIGATION ****************/
+    .nav-services {
+        font-size: .85em;
+        padding-top: 5px;
+    }
+    .nav-services, .services-lang-contact {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .nav-lang {
+        display: inline-block;
+        float: right;
+        margin-left: 15px;
+        margin-bottom: 15px;
+        padding-left: 15px;
+    }
+    .nav-lang a {
+        color: #454545;
+        padding: 4px;
+    }
+    .nav-lang a.active {
+        background: #e5e5e5;
+    }
+    .nav-service a {
+        color: #454545;
+        font-size: .85em;
+    }
+    .treecrumb .dropdown:first-child .dropdown-toggle {
+        border-left: 1px solid #ccc;
+        padding-left: 10px;
+    }
+    .treecrumb .dropdown-toggle {
+        padding: 0 10px;
+        line-height: 24px;
+        padding-left: 30px;
+        font-size: 13px;
+        background: 0 0;
+        color: #454545;
+        border: 1px solid #ccc;
+        border-left-color: transparent;
+        border-right: none;
+        position: relative;
+        height: 27px;
+    }
+    .treecrumb .dropdown-toggle::after, .treecrumb .dropdown-toggle::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -1px;
+        right: -26px;
+        width: 0;
+        height: 0;
+        border-color: transparent transparent transparent #ccc;
+        border-style: solid;
+        border-width: 1.05em;
+    }
+    .treecrumb .dropdown-toggle::after {
+        right: -25px;
+        border-color: transparent transparent transparent #fff;
+    }
+    .nav>li>a {
+        display: block;
+    }
+    .treecrumb .dropdown-toggle span {
+        display: inline-block;
+        min-width: 13px;
+        margin-right: .5em;
+    }
+    span.icon {
+        font-family: "Admin Icons";
+        position: relative;
+    }
+    span.icon.icon--right:after {
+       content: "";
+    }
+    .brand img {
+        max-width: 252px;
+        height: auto;
+        margin: 0;
+        padding-right: 2em;
+        border-right: 1px solid #e5e5e5;
+        float: left;
+    }
+    .brand h2 {
+        color: #000;
+        font-weight: 700;
+        font-size: 1em;
+        max-width: 310px;
+        line-height: 1.3;
+        margin: 0;
+        padding-left: 2.5em;
+        float: left;
+    }
+    /**************** MAIN-NAVIGATION ****************/
+
+
+
+
+
+/**************** CONTENT (MAIN) ****************/
+
+
+
+    /**************** READING-PAGE ****************/
+
+
+
+/**************** FOOTER ****************/
+
 
 
 
@@ -57,7 +295,18 @@ body {
     .container-main {
         margin-bottom: 90px;
     }
+    header {
+        padding: 0 0 30px 0;
+    }
+    
 }
+
+@media only screen and (min-width: 992px) {
+    .nav-lang {
+        border-left: 1px solid #e5e5e5;
+    }
+}
+
 
 @media (min-width: 1200px) {
 body:before {
