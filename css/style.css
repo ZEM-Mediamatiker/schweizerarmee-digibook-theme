@@ -106,7 +106,7 @@
     font-weight: 400;
 }
 html {
-    font-size: 87.5%;
+    font-size: 100%;
 }
 body {
     margin: 0;
@@ -121,8 +121,6 @@ body {
 }
 .container {
     margin-top: 1.357em;
-    padding-right: 15px;
-    padding-left: 15px;
     padding-top: 10px;
     margin-right: auto;
     margin-left: auto;
@@ -160,6 +158,7 @@ ul {
     .nav-services {
         font-size: .85em;
         padding-top: 5px;
+        margin-bottom: 6px;
     }
     .nav-services, .services-lang-contact {
         flex-direction: row;
@@ -242,16 +241,85 @@ ul {
     .brand h2 {
         color: #000;
         font-weight: 700;
-        font-size: 1em;
+        font-size: .875em;
         max-width: 310px;
         line-height: 1.3;
         margin: 0;
         padding-left: 2.5em;
         float: left;
     }
+    .main-header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .search-filter-container {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+
+
     /**************** MAIN-NAVIGATION ****************/
+    .nav-main-container {
+        display: inline;
+    }
+    .nav-main {
+        background: linear-gradient(to bottom,#e4e4e4 0,#e2e2e2 39%,#ddd 79%,#d5d5d5 91%,#cfcfcf 95%,#bebebe 99%);
+    }   
+    .navbar {
+        position: relative;
+    }
+    .nav-main.yamm .nav {
+        display: flex;
+        flex-direction: row;
+        margin: 0 1.6em;
+        border-left: 1px solid #b8b8b8;
+    }
 
-
+    .nav-main.yamm .nav>li>a {
+        max-width: 140px;
+    }
+    .nav-main.yamm .nav>li>a {
+        height: 70px;
+        background: #e8e8e8;
+        background: -webkit-gradient(linear,left top,left bottom,color-stop(0,#e8e8e8),color-stop(61%,#f7f7f7),color-stop(89%,#f7f7f7),color-stop(91%,#f5f5f5),color-stop(95%,#ececec),to(#d7d7d7));
+        background: linear-gradient(to bottom,#e8e8e8 0,#f7f7f7 61%,#f7f7f7 89%,#f5f5f5 91%,#ececec 95%,#d7d7d7 100%);
+        max-width: 110px;
+        color: #454545;
+        font-size: .95em;
+        line-height: 1.2;
+        padding: 10px 9px;
+    }
+    .nav>li>a {
+        position: relative;
+        display: block;
+    }
+    .nav-main.yamm .nav .dropdown.current>a {
+        z-index: 999;
+        color: #DC0018;
+        font-weight: 700;
+    }
+    .nav-main.yamm .nav .dropdown.active>a, .nav-main.yamm .nav .dropdown.current>a {
+        background: #fff;
+        border-top: 5px solid #f7001d;
+        margin-top: -5px;
+        height: 75px;
+    }
+    .nav-main.yamm .nav>li {
+        border-right: 1px solid #b8b8b8;
+        border-left: 1px solid #fff;
+    }
+    .nav-main.yamm .nav>li>a:after {
+        content: "";
+        font-family: "Admin Icons";
+        position: absolute;
+        bottom: 4px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        color: #454545;
+        font-size: .9em;
+    }
 
 
 
@@ -296,7 +364,14 @@ ul {
         margin-bottom: 90px;
     }
     header {
-        padding: 0 0 30px 0;
+        padding: 0 15px 30px 15px;
+    }
+    .nav-main {
+        min-height: 65px;
+        border-top: 5px solid #dc0018;
+    }
+    .nav-mobile {
+        display: none;
     }
     
 }
@@ -306,6 +381,7 @@ ul {
         border-left: 1px solid #e5e5e5;
     }
 }
+
 
 
 @media (min-width: 1200px) {
