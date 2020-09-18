@@ -122,6 +122,7 @@ body {
 .container {
     margin-top: 1.357em;
     padding-top: 10px;
+    padding-bottom: 10px;
     margin-right: auto;
     margin-left: auto;
     background: #fff;
@@ -324,8 +325,126 @@ ul {
 
 
 /**************** CONTENT (MAIN) ****************/
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+main {
+    margin-top: 25px;
+}
+main h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #F2F7F9;
+    background-color: #454545;
+    margin-bottom: 0;
+    margin-top: -10px;
+    position: relative;
+    padding: 6px 15px;
+}
+.overview-container {
+    margin: 42px 0;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.topic-container {
+    margin: 10px 0;
+}
+main img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    object-position: 75% 25%;
+}
+.title-img {
+    width: 100%;
+}
+.topic-container {
+    background-color: #F2F7F9;
+    height: auto;
+}
+.topic-container figure {
+    margin: 10px 0;
+}
+.topic-container figcaption  {
+    position: relative;
+    width: 480px;
+    font-size: 35px;
+    font-weight: 700;
+    color: #333;
+    background-color: #F2F7F9;
+    margin-top: -72px;
+    padding: 5px 32px;
+    z-index: 999;
+    cursor: pointer;
+}
+.topic-container figure img {
+    position: relative;
+    height: 250px;  
+    z-index: 99;
+}
+.topic-container ol {
+    padding: 0 20px;
+    display: none;
+}
+.topic-container ol.opened {
+    display: block;
+}
+.topic-container ol ol, .topic-container ol ol ol {
+    padding: 0 0;
+    display: block;
+}
+.topic-container li li, .topic-container li li a {
+    color: #006699;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 15px 0;
+}
+.topic-container li li li, .topic-container li li li a, topic-container li li li li, .topic-container li li li li a {
+    font-weight: 400;
+    margin: 0 0;
+}
 
 
+main .hide {
+    visibility: hidden;
+}
+main .visible{
+    visibility: visible;
+}
+main ol {
+    list-style-type: none;
+    counter-reset: item;
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+  
+main li {
+    display: table;
+    counter-increment: item;
+    margin-bottom: 0.6em;
+}
+  
+main li:before {
+    content: counters(item, "-") " ";
+    display: table-cell;
+    padding-right: 0.6em;    
+}
+  
+main li li {
+    margin: 0;
+}
+  
+main li li:before {
+    content: counters(item, "-") " ";
+}
+  
+main li.parent:before {
+    content: "";
+}
 
     /**************** READING-PAGE ****************/
 
@@ -372,6 +491,10 @@ ul {
     }
     .nav-mobile {
         display: none;
+    }
+    main h1 {
+        font-size: 35px;
+        padding: 22px 15px;
     }
     
 }
