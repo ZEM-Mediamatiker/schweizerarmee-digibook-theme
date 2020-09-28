@@ -153,7 +153,9 @@ ul {
     clear: both;
 }
 /**************** HEADER ****************/
-
+#search-field {
+    display: none;
+}
 
     /**************** SERVICE-NAVIGATION ****************/
     .nav-services {
@@ -321,8 +323,11 @@ ul {
         color: #454545;
         font-size: .9em;
     }
-
-
+    .nav-main.yamm .nav>li>a:hover {
+        color: #DC0018;
+        background: linear-gradient(to bottom,#fff 0,#fff 61%,#fff 89%,#fff 91%,#f3f3f3 95%,#dbdbdb 100%);
+    }
+        
 
 /**************** CONTENT (MAIN) ****************/
 .container-fluid {
@@ -342,15 +347,11 @@ main h1 {
     margin-bottom: 0;
     margin-top: -10px;
     position: relative;
-    padding: 6px 15px;
+    padding: 10px 15px;
 }
 .overview-container {
-    margin: 42px 0;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-.topic-container {
-    margin: 10px 0;
+    padding: 10px 15px;
+    background-color: #D5D5D5;
 }
 main img {
     width: 100%;
@@ -362,7 +363,10 @@ main img {
     width: 100%;
 }
 .topic-container {
+    margin: 20px 0;
+    cursor: pointer;
     background-color: #F2F7F9;
+    border-radius: 0 0 4px 4px;
     height: auto;
 }
 .topic-container figure {
@@ -375,10 +379,10 @@ main img {
     font-weight: 700;
     color: #333;
     background-color: #F2F7F9;
-    margin-top: -72px;
+    border-radius: 0 8px 0 0;
+    margin-top: -73px;
     padding: 5px 32px;
     z-index: 999;
-    cursor: pointer;
 }
 .topic-container figure img {
     position: relative;
@@ -386,7 +390,7 @@ main img {
     z-index: 99;
 }
 .topic-container ol {
-    padding: 0 20px;
+    padding: 0 30px;
     display: none;
 }
 .topic-container ol.opened {
@@ -397,12 +401,13 @@ main img {
     display: block;
 }
 .topic-container li li, .topic-container li li a {
+    font-size: 1.4em;
     color: #006699;
-    font-size: 24px;
     font-weight: 700;
     margin: 15px 0;
 }
 .topic-container li li li, .topic-container li li li a, topic-container li li li li, .topic-container li li li li a {
+    font-size: 1.1em;
     font-weight: 400;
     margin: 0 0;
 }
@@ -439,13 +444,113 @@ main li li {
 }
   
 main li li:before {
+    font-size: 1.4em;
     content: counters(item, "-") " ";
 }
-  
+main li li li:before { 
+    font-size: 1.1em;
+}
 main li.parent:before {
     content: "";
 }
 
+    /**************** CONTACT-PAGE ****************/
+    .contact-wrap {
+        padding: 35px 15px;
+        background-color: #F2F7F9;
+    }
+    .contact-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+    }
+    .contact-container {
+        display: flex;
+        width: 48.5%;
+        flex-direction: column;
+    }
+    .contact {
+        display: inline-block;
+        padding: 18px 15px;
+        margin-bottom: 20px;
+        height: 80px;
+        background-color: #fff;
+        border-radius: 4px;
+        line-height: 1.4;
+        -webkit-box-shadow: 0 0 15px 0 rgba(0,0,0,.4);
+        box-shadow: 0 0 15px 0 rgba(0,0,0,.4);
+    }
+    .contact aside {
+        display: none;
+        opacity: 0;
+        margin-top: 20px;
+    }
+    .contact aside a {
+        color: #006699;
+    }
+    .contact.open {
+        animation: opened .5s forwards;
+        /******** evtl. Shadow ändern ********/
+        -webkit-box-shadow: 0 0 15px 0 rgba(0, 102, 153, .4);
+        box-shadow: 0 0 15px 0 rgba(0, 102, 153, .4);
+    }
+    .contact.open::before {
+        content: " ";
+        position: absolute;
+        width: 400px;
+        margin-top: 50px;
+        border-radius: 25px;
+        border-bottom: 1px solid #006699;
+    }
+    .contact.open>aside {
+        display: block;
+        max-height: 90px;
+        animation: opened .3s forwards .5s;
+    }
+    .contact.open>h4 {
+        color: #006699;
+    }
+    @keyframes opened {
+        from { height: 0; opacity: 0; }
+        to { height: 180px; opacity: 1; }
+    }
+    @keyframes show {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    .contact-wrap h4 {
+        margin: 0;
+        display: inline-block;
+        font-size: 1.1em;
+        font-weight: 700;
+        color: #333;
+        cursor: pointer;
+    }
+
+    .link-wrap {
+        padding: 20px 15px;
+        background-color: #fff;
+        border-radius: 4px;
+    }
+    .link-wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .link-wrapper a::after {
+        content: attr(href);
+        color: #006699;
+        font-weight: 700;
+    }
+    .link-wrapper .link-container {
+        display: flex;
+        width: 48.5%;
+        margin: 15px 0;
+        flex-direction: column;
+        color: #006699;
+    }
+    
     /**************** READING-PAGE ****************/
 
 
@@ -506,21 +611,52 @@ main li.parent:before {
 }
 
 
+@media only screen and (max-width: 768px) {
+    main img {
+        max-height: 200px;
+    }
+    .topic-container figcaption {
+        width: 100%;
+        border-radius: 0;
+        font-size: 24px;
+        padding: 5px 15px;
+        margin-top: -55px;
+    }
+    .topic-container ol {
+        padding: 0 0;
+    }
+    .container-fluid {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .contact-wrapper {
+        flex-direction: column;
+    }
+    .contact-container {
+        width: 100%;
+    }
+    .link-wrapper .link-container {
+        width: 100%;
+    }
+}
+
 
 @media (min-width: 1200px) {
-body:before {
-    content: "desktop";
-}
+    body:before {
+        content: "desktop";
+    }
 }
 @media (min-width: 992px) {
-body:before {
-    content: "desktop";
-}
+    body:before {
+        content: "desktop";
+    }
 }
 @media (min-width: 768px) {
-body:before {
-    content: "tablet";
-}
+    body:before {
+        content: "tablet";
+    }
 }
 body:before {
     content: "smartphone";
