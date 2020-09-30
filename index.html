@@ -5,6 +5,7 @@
         <title>Schweizer Armee - Digital Book</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="cleartype" content="on">
+        <link href="fonts/fontawesome/css/all.css" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
@@ -12,11 +13,11 @@
             <header class="background-size: cover;" role="banner">
                 <section class="nav-services flex">
                     <nav class="navbar treecrumb">
-                        <ul class="nav navbar-nav">
+                        <ul class="nav navbar-nav flex">
                             <!-- Treecrumb dropdown element -->
                             <li class="dropdown">
                                 <!-- Dropdown label -->
-                                <a id="admin-dropdown" href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="icon icon--right"></span>Schweizer Armee</a>
+                                <a id="admin-dropdown" href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="icon icon--right"></span>Übersicht</a>
                                 <!-- Dropdown list element -->
                                 <ul class="dropdown-menu" role="menu" aria-labelledby="admin-dropdown">
                                 </ul>
@@ -175,27 +176,31 @@
                                     <h1><a href="#">Schweizer Armee</a></h1>
                                 </div>
                             </div>
-                            <div class="table-cell dropdown">
-                                <a href="#" class="nav-mobile-menu dropdown-toggle" data-toggle="dropdown"><span class="icon icon--menu"></span></a>
-                                <div class="drilldown dropdown-menu" role="menu">
-                                    <div class="drilldown-container">
-                                        <nav class="nav-page-list">
-                                            <ul>
-                                                <li><a href="index.html">Übersicht</a></li>
-                                                <li><a href="contact.html">Kontakt</a></li>
-                                            </ul>
-                                            <a href="#" class="yamm-close-bottom"><span class="icon icon--top" aria-hidden="true"></span></a>
-                                        </nav>
+                            <div class="mobile-search-nav">
+                                <div class="table-cell dropdown">
+                                    <a href="#" class="nav-mobile-menu dropdown-toggle" data-toggle="dropdown"><span class="icon icon--menu"></span></a>
+                                    <div class="drilldown dropdown-menu" role="menu">
+                                        <div class="drilldown-container">
+                                            <nav class="nav-page-list">
+                                                <ul>
+                                                    <li><a href="index.html">Übersicht</a></li>
+                                                    <li><a href="contact.html">Kontakte</a></li>
+                                                    <li><a href="read-example.html"><i class="fas fa-book-open"></i> Lesen</a></li>
+                                                </ul>
+                                                <a href="#" class="yamm-close-bottom"><span class="icon icon--top" aria-hidden="true"></span></a>
+                                            </nav>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="table-cell dropdown">
-                                <a href="#" class="nav-mobile-menu dropdown-toggle" data-toggle="dropdown"><span class="icon icon--search"></span></a>
-                                <div class="dropdown-menu" role="menu">
-                                    <form class="form">
-                                        <input id="search-field" class="form-control" type="text" placeholder="Search">
-                                        <span class="icon icon--search"></span>
-                                    </form>
+                                <div class="table-cell dropdown">
+                                    <a href="#" class="nav-mobile-menu dropdown-toggle" data-toggle="dropdown"><span class="icon icon--search"></span></a>
+                                    <div class="dropdown-menu" role="menu">
+                                        <form class="form">
+                                            <input id="search-field" class="form-control" type="text" placeholder="Search">
+                                            <button class="icon icon--search icon--before" tabindex="0" role="button"></button>
+                                            <button class="icon icon--close icon--after search-reset" tabindex="0" role="button"></button>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -217,7 +222,20 @@
                             <!-- Dropdown `ul` end -->
                         </li>
                         <li class="dropdown yamm-fw">
-                            <a href="contact.html" class="dropdown-toggle" data-toggle="dropdown">Kontakt</a>
+                            <a href="contact.html" class="dropdown-toggle" data-toggle="dropdown">Kontakte</a>
+                            <ul class="dropdown-menu" role="menu">
+                                <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
+                                <li>
+                                    <!-- The `yamm-content` can contain any kind of content like tab, table, list, article... -->
+                                    <div class="yamm-content container-fluid"></div>
+                                    <!-- `yamm-content` end -->
+                                </li>
+                                <!-- Dropdown `li` end -->
+                            </ul>
+                            <!-- Dropdown `ul` end -->
+                        </li>
+                        <li class="dropdown yamm-fw">
+                            <a href="read-example.html" class="dropdown-toggle" data-toggle="dropdown"><i class="fas fa-book-open fa-2x"></i></a>
                             <ul class="dropdown-menu" role="menu">
                                 <!-- The `li` presence heritated from the classic dropdown structure, only one in that case -->
                                 <li>
@@ -272,7 +290,7 @@
                         <ol>
                             <li class="hide">
                                 <ol class="visible">
-                                    <li><a href="#">Unsere Sicherheitspolitik - Sicherheit durch Kooperation</a>
+                                    <li start="2"><a href="#">Unsere Sicherheitspolitik - Sicherheit durch Kooperation</a>
                                         <ol>
                                             <li><a href="#">Sicherheitspolitischer Bericht 2000</a></li>
                                         </ol>
